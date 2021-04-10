@@ -1,0 +1,14 @@
+click-completion
+click-configfile
+click-default-group
+click-didyoumean
+click-help-colors
+click-log
+click-man
+click-option-group
+click-repl
+click-spinner
+click-threading
+colorama
+sphinx-click
+typer
