@@ -56,6 +56,10 @@ docutils==0.17
     # via
     #   sphinx
     #   sphinx-click
+doublemetaphone==0.1
+    # via probablepeople
+future==0.18.2
+    # via probablepeople
 idna==2.10
     # via requests
 imagesize==1.2.0
@@ -68,12 +72,20 @@ markupsafe==1.1.1
     # via jinja2
 packaging==20.9
     # via sphinx
+probableparsing==0.0.1
+    # via probablepeople
+probablepeople==0.5.4
+    # via -r requirements.in
 prompt-toolkit==3.0.18
     # via click-repl
 pygments==2.8.1
     # via sphinx
 pyparsing==2.4.7
     # via packaging
+python-crfsuite==0.9.7
+    # via probablepeople
+python-dateutil==2.8.1
+    # via vobject
 pytz==2021.1
     # via babel
 requests==2.25.1
@@ -85,6 +97,7 @@ six==1.15.0
     #   click-completion
     #   click-configfile
     #   click-repl
+    #   python-dateutil
 snowballstemmer==2.1.0
     # via sphinx
 sphinx-click==2.7.1
@@ -107,6 +120,8 @@ typer==0.3.2
     # via -r requirements.in
 urllib3==1.26.4
     # via requests
+vobject==0.9.6.1
+    # via -r requirements.in
 wcwidth==0.2.5
     # via prompt-toolkit
 
