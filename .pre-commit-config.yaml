@@ -47,23 +47,23 @@ repos:
       hooks:
           - id: fix-smartquotes
 
-  # Docker
-
-    - repo: https://github.com/IamTheFij/docker-pre-commit
-      rev: v2.0.0
-      hooks:
-          - id: docker-compose-check
-
-    - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
-      rev: v0.1.0
-      hooks:
-          - id: dockerfilelint
-            stages: [commit]
-
-    - repo: https://github.com/hadolint/hadolint
-      rev: v2.1.0
-      hooks:
-          - id: hadolint
+  #  # Docker
+  #
+  #    - repo: https://github.com/IamTheFij/docker-pre-commit
+  #      rev: v2.0.0
+  #      hooks:
+  #          - id: docker-compose-check
+  #
+  #    - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
+  #      rev: v0.1.0
+  #      hooks:
+  #          - id: dockerfilelint
+  #            stages: [commit]
+  #
+  #    - repo: https://github.com/hadolint/hadolint
+  #      rev: v2.1.0
+  #      hooks:
+  #          - id: hadolint
 
   # Git
 
@@ -137,7 +137,7 @@ repos:
           - id: script-must-not-have-extension
           - id: shellcheck
             args: [--external-sources, --format=gcc, --shell=bash]
-          - id: shfmt
+          # - id: shfmt
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks
       rev: v1.1.9

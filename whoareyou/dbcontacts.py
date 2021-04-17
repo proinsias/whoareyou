@@ -148,4 +148,4 @@ def getNContactsFromDb(
 
     s = db.Session()
 
-    return s.query(Contact).limit(n).all()
+    return s.query(Contact).order_by(func.random()).limit(n).all()

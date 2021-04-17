@@ -13,6 +13,9 @@ app = typer.Typer()
 NUM_CONTACTS_TO_TEST = 4
 
 
+# FIXME: GT todo.txt.
+
+
 @app.command('import')
 def import_vcard(
     file: pathlib.Path,  # help = 'the input file'  # FIXME: Add details, include 'file' help name.
@@ -43,10 +46,15 @@ def names():
     ansi_colors = images.getAnsiColorsFromPhotoData(contacts[choice].photo_data)
     printAnsiColors(ansi_colors)
 
-    for contact in contacts:
-        typer.echo(f'{contact.first_name} {contact.surname}')
+    for i, contact in enumerate(contacts):
+        typer.echo(f'{i+1}: {contact.first_name} {contact.surname}')
 
-    typer.echo(f'{contacts[choice].first_name} {contacts[choice].surname}')
+    guess = typer.prompt('Enter the number for the name that goes with this face')
+
+    if int(guess) == choice + 1:
+        typer.echo(f'Correct! It is {contacts[choice].first_name} {contacts[choice].surname}!!!')
+    else:
+        typer.echo(f'Afraid not! It is {contacts[choice].first_name} {contacts[choice].surname}. Try again!')
 
 
 @app.command()
@@ -58,11 +66,27 @@ def faces():
 
     choice = random.randint(0, NUM_CONTACTS_TO_TEST-1)
 
-    typer.echo(f'{contacts[choice].first_name} {contacts[choice].surname}')
+    typer.echo(
+        'Which face goes with this name: '
+        f'{contacts[choice].first_name} {contacts[choice].surname}?',
+    )
 
-    for contact in contacts:
+    typer.echo('Is it...')
+
+    guess = -1
+
+    for i, contact in enumerate(contacts):
         ansi_colors = images.getAnsiColorsFromPhotoData(contact.photo_data)
         printAnsiColors(ansi_colors)
+        response = typer.prompt(f'This face? (y/n)')
+        if response == 'y':
+            guess = i + 1
+            break
+
+    if int(guess) == choice + 1:
+        typer.echo(f'Correct! This is {contacts[choice].first_name} {contacts[choice].surname}!!!')
+    else:
+        typer.echo(f'Afraid not! This is {contacts[choice].first_name} {contacts[choice].surname}. Try again!')
 
     ansi_colors = images.getAnsiColorsFromPhotoData(contacts[choice].photo_data)
     printAnsiColors(ansi_colors)
