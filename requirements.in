@@ -10,7 +10,10 @@ click-repl
 click-spinner
 click-threading
 colorama
+numpy
+pillow
 probablepeople
 sphinx-click
+sqlalchemy
 typer
 vobject
