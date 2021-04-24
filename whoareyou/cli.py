@@ -6,8 +6,10 @@ import typing
 
 import typer
 
+import config
 import dbcontacts
 import images
+
 
 app = typer.Typer()
 NUM_CONTACTS_TO_TEST = 4
@@ -16,21 +18,49 @@ NUM_CONTACTS_TO_TEST = 4
 # FIXME: GT todo.txt.
 
 
+def printAnsiColors(
+    ansi_colors: typing.List[typing.List[str]],
+) -> None:
+    for ansi_color_row in ansi_colors:
+        for ansi_color in ansi_color_row:
+            typer.echo(ansi_color, nl=False)
+        typer.echo()
+
+
+def version_callback(
+        value: bool,
+) -> None:
+
+    if value:
+        typer.echo(f'{config.name} version: {config.__version__}')
+        raise typer.Exit()
+
+
 @app.command('import')
 def import_vcard(
-    file: pathlib.Path,  # help = 'the input file'  # FIXME: Add details, include 'file' help name.
+    file: pathlib.Path = typer.Argument(
+        ...,
+        help='The vCard file to ingest',
+        metavar='file',
+        exists=True,
+        file_okay=True,
+        dir_okay=False,
+        writable=False,
+        readable=True,
+        resolve_path=True,
+    ),
 ) -> None:
     """
-    Extract the contact info from a vCard file.
+    Save the contact info from a vCard file to the database.
+
+    Duplicates are ignored.
+    Command exits with code 1 if the file is not found.
     """
 
-    with open(file, 'r') as f:
+    with file.open() as f:
         vcard = f.read()
         contacts = dbcontacts.loadContactsFromVCard(vcard)
         dbcontacts.loadContactsIntoDb(contacts)
-
-    # FIXME: Add a help text for a CLI argument
-    # FIXME: metavar
 
 
 @app.command()
@@ -94,17 +124,16 @@ def faces():
 
 @app.callback()
 def callback(
+    version: typing.Optional[bool] = typer.Option(
+        None,
+        '--version',
+        '-v',
+        callback=version_callback,
+        is_eager=True,
+    ),
 ):
+    """Practice remembering important names and faces."""
     pass
-
-
-def printAnsiColors(
-    ansi_colors: typing.List[typing.List[str]],
-) -> None:
-    for ansi_color_row in ansi_colors:
-        for ansi_color in ansi_color_row:
-            typer.echo(ansi_color, nl=False)
-        typer.echo()
 
 
 if __name__ == '__main__':

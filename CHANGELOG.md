@@ -13,11 +13,13 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 * PATCH version when you make backwards compatible bug fixes.
 -->
 
-<!--
-
-## [Unreleased]
+## \[Unreleased\]
 
 ### Added
+
+- Added more internal and user-facing documentation.
+
+<!--
 
 ### Changed
 

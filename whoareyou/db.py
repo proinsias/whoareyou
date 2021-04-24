@@ -10,6 +10,9 @@ Base = sqlalchemy.ext.declarative.declarative_base(bind=engine)
 Session = sqlalchemy.orm.sessionmaker(bind=engine)
 
 
+# FIXME: Disable INFO logging.
+
+
 @sqlalchemy.ext.compiler.compiles(sqlalchemy.sql.expression.Insert)
 def _prefix_insert_with_ignore(insert, compiler, **kw):
     """

@@ -2,6 +2,7 @@
 
 import typing
 
+import probablepeople as pp
 import typer
 import vobject
 from sqlalchemy import select, func, Column, Integer, Text, UniqueConstraint
