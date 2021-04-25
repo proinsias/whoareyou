@@ -136,3 +136,6 @@ dmypy.json
 
 # Ignore sqlite database file.
 contacts.sqlite
+
+# Ignore vCard file.
+contacts.vcf

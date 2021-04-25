@@ -13,10 +13,11 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 * PATCH version when you make backwards compatible bug fixes.
 -->
 
-## \[Unreleased\]
+## [Unreleased]
 
 ### Added
 
+- Added [streamlit.io](https://streamlit.io/) support.
 - Added more internal and user-facing documentation.
 
 <!--
@@ -38,3 +39,4 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 -->
 
 [1.0.0]: https://github.com/proinsias/whoareyou/releases/tag/v1.0.0
+[unreleased]: https://github.com/proinsias/whoareyou/compare/v1.0.0...HEAD

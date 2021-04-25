@@ -4,14 +4,43 @@
 #
 #    update-requirements
 #
+appnope==0.1.2
+    # via ipython
+backcall==0.2.0
+    # via ipython
 click==7.1.2
     # via pip-tools
+decorator==5.0.7
+    # via ipython
+ipython-genutils==0.2.0
+    # via traitlets
+ipython==7.22.0
+    # via -r dev-requirements.in
+jedi==0.18.0
+    # via ipython
+parso==0.8.2
+    # via jedi
 pep517==0.10.0
     # via pip-tools
+pexpect==4.8.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
 pip-tools==6.1.0
     # via -r dev-requirements.in
+prompt-toolkit==3.0.18
+    # via ipython
+ptyprocess==0.7.0
+    # via pexpect
+pygments==2.8.1
+    # via ipython
 toml==0.10.2
     # via pep517
+traitlets==5.0.5
+    # via ipython
+wcwidth==0.2.5
+    # via prompt-toolkit
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
+# setuptools

@@ -15,5 +15,7 @@ pillow
 probablepeople
 sphinx-click
 sqlalchemy
+streamlit
 typer
 vobject
+watchdog
