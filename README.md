@@ -18,3 +18,6 @@ Practice remembering important names and faces.
 - [@nikhilkumarsingh](https://github.com/nikhilkumarsingh) for their python
   [terminal-image-viewer](https://github.com/nikhilkumarsingh/terminal-image-viewer).
 - [nameshark](http://www.namesharkapp.com) for the inspiration.
+
+[mergify]: https://mergify.io
+[mergify-status]: https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/proinsias/whoareyou&style=flat
