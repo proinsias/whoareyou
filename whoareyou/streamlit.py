@@ -6,6 +6,7 @@ import urllib
 
 import streamlit as st
 
+import config
 import dbcontacts
 
 
@@ -90,6 +91,7 @@ def test_names():
 
 
 def app():
+    # FIXME: Add whoareyou version __init__.__version__.
     readme_text = st.markdown(get_file_content_as_string('streamlit_instructions.md'))
 
     st.sidebar.title('What to do')
@@ -105,6 +107,7 @@ def app():
     elif app_mode == 'Test Names':
         readme_text.empty()
         test_names()
+    # FIXME:
     # elif app_mode == "Test Faces":
     #     readme_text.empty()
     #     test_faces()

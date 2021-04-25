@@ -6,16 +6,13 @@ import typing
 
 import typer
 
-import config
+import __init__
 import dbcontacts
 import images
 
 
 app = typer.Typer()
 NUM_CONTACTS_TO_TEST = 4
-
-
-# FIXME: GT todo.txt.
 
 
 def printAnsiColors(
@@ -32,7 +29,7 @@ def version_callback(
 ) -> None:
 
     if value:
-        typer.echo(f'{config.name} version: {config.__version__}')
+        typer.echo(f'{config.name} version: {__init__.__version__}')
         raise typer.Exit()
 
 
@@ -66,7 +63,7 @@ def import_vcard(
 @app.command()
 def names():
     """
-    Docstring. FIXME:
+    Identify which name goes with a random face.
     """
 
     contacts = dbcontacts.getNContactsFromDb(NUM_CONTACTS_TO_TEST)
@@ -90,7 +87,7 @@ def names():
 @app.command()
 def faces():
     """
-    Docstring. FIXME:
+    Identify which face goes with a random name.
     """
     contacts = dbcontacts.getNContactsFromDb(NUM_CONTACTS_TO_TEST)
 

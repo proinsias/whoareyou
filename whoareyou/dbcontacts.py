@@ -5,6 +5,7 @@ import typing
 import probablepeople as pp
 import typer
 import vobject
+import vobject.base
 from sqlalchemy import select, func, Column, Integer, Text, UniqueConstraint
 
 import db
@@ -33,16 +34,9 @@ db.Base.metadata.create_all()
 
 
 def get_contact_from_v_component(
-    v_component,  # FIXME: Type.
+    v_component: vobject.base.Component,
 ) -> typing.Optional[Contact]:
-    """
-    Docstring
-
-    :param v_component:  # FIXME:
-
-    :return:
-
-    """
+    """ Docstring FIXME: """
 
     # FIXME: String constants.
     photo_data = v_component.getChildValue('photo')
@@ -76,7 +70,6 @@ def get_names_from_fn_field(
         >>> get_names_from_fn_field('John Smith')
         ('John', 'Smith')
     """
-    # FIXME: Add unit tests.
 
     first_name = None
     surname = None

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import io
 import typing
 
@@ -36,7 +37,7 @@ def getAnsiColorsFromPhotoData(
     photo_data: bytes,
 ) -> typing.List[typing.List[str]]:
     """
-    Docstring.  FIXME:
+    Convert photo data from bytes to ANSI colors.
 
     Credit to <https://github.com/nikhilkumarsingh/terminal-image-viewer>.
     """

@@ -6,12 +6,9 @@ import sqlalchemy.ext.declarative
 import sqlalchemy.sql.expression
 import sqlalchemy.orm
 
-engine = sqlalchemy.create_engine('sqlite:///contacts.sqlite', echo=True)
+engine = sqlalchemy.create_engine('sqlite:///contacts.sqlite', echo=False)
 Base = sqlalchemy.ext.declarative.declarative_base(bind=engine)
 Session = sqlalchemy.orm.sessionmaker(bind=engine)
-
-
-# FIXME: Disable INFO logging.
 
 
 @sqlalchemy.ext.compiler.compiles(sqlalchemy.sql.expression.Insert)
