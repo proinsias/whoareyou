@@ -150,3 +150,11 @@ def getNContactsFromDb(
     s = db.Session()
 
     return s.query(Contact).order_by(func.random()).limit(n).all()
+
+
+def getNumberContactsFromDb(
+) -> int:
+
+    s = db.Session()
+
+    return s.query(Contact).count()
