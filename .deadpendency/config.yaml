@@ -1,0 +1,27 @@
+---
+
+ignore-failures:
+
+    python:
+        - async-generator
+        - async-timeout
+        - click-completion
+        - click-configfile
+        - click-default-group
+        - click-didyoumean
+        - click-log
+        - click-repl
+        - click-threading
+        - cycler
+        - entrypoints
+        - markupsafe
+        - mccabe
+        - mistune
+        - patsy
+        - pickleshare
+        - probableparsing
+        - probablepeople
+        - pylev
+        - send2trash
+        - testpath
+        - webencodings
