@@ -282,7 +282,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
-sqlalchemy==1.4.11
+sqlalchemy==1.4.14
     # via -r requirements.in
 streamlit==0.80.0
     # via -r requirements.in
