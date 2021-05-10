@@ -8,10 +8,6 @@ alabaster==0.7.12
     # via sphinx
 altair==4.1.0
     # via streamlit
-appnope==0.1.2
-    # via
-    #   ipykernel
-    #   ipython
 argon2-cffi==20.1.0
     # via notebook
 astor==0.8.1
@@ -175,7 +171,6 @@ numpy==1.20.2
     #   -r requirements.in
     #   altair
     #   pandas
-    #   pyarrow
     #   pydeck
     #   streamlit
 packaging==20.9
@@ -215,8 +210,6 @@ ptyprocess==0.7.0
     # via
     #   pexpect
     #   terminado
-pyarrow==3.0.0
-    # via streamlit
 pycparser==2.20
     # via cffi
 pydeck==0.6.2
@@ -287,7 +280,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
-sqlalchemy==1.4.11
+sqlalchemy==1.4.14
     # via -r requirements.in
 streamlit==0.80.0
     # via -r requirements.in
@@ -328,6 +321,10 @@ validators==0.18.2
     # via streamlit
 vobject==0.9.6.1
     # via -r requirements.in
+watchdog==2.1.1
+    # via
+    #   -r requirements.in
+    #   streamlit
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
