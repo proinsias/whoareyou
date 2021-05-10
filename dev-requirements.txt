@@ -4,8 +4,6 @@
 #
 #    update-requirements
 #
-appnope==0.1.2
-    # via ipython
 backcall==0.2.0
     # via ipython
 click==7.1.2
@@ -14,9 +12,11 @@ decorator==5.0.7
     # via ipython
 ipython-genutils==0.2.0
     # via traitlets
-ipython==7.22.0
+ipython==7.23.1
     # via -r dev-requirements.in
 jedi==0.18.0
+    # via ipython
+matplotlib-inline==0.1.2
     # via ipython
 parso==0.8.2
     # via jedi
@@ -37,7 +37,9 @@ pygments==2.8.1
 toml==0.10.2
     # via pep517
 traitlets==5.0.5
-    # via ipython
+    # via
+    #   ipython
+    #   matplotlib-inline
 wcwidth==0.2.5
     # via prompt-toolkit
 

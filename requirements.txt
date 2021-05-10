@@ -8,10 +8,6 @@ alabaster==0.7.12
     # via sphinx
 altair==4.1.0
     # via streamlit
-appnope==0.1.2
-    # via
-    #   ipykernel
-    #   ipython
 argon2-cffi==20.1.0
     # via notebook
 astor==0.8.1
@@ -117,7 +113,7 @@ ipython-genutils==0.2.0
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.22.0
+ipython==7.23.1
     # via
     #   ipykernel
     #   ipywidgets
@@ -154,6 +150,8 @@ jupyterlab-widgets==1.0.0
     # via ipywidgets
 markupsafe==1.1.1
     # via jinja2
+matplotlib-inline==0.1.2
+    # via ipython
 mistune==0.8.4
     # via nbconvert
 nbclient==0.5.3
@@ -175,7 +173,6 @@ numpy==1.20.2
     #   -r requirements.in
     #   altair
     #   pandas
-    #   pyarrow
     #   pydeck
     #   streamlit
 packaging==20.9
@@ -215,8 +212,6 @@ ptyprocess==0.7.0
     # via
     #   pexpect
     #   terminado
-pyarrow==3.0.0
-    # via streamlit
 pycparser==2.20
     # via cffi
 pydeck==0.6.2
@@ -313,6 +308,7 @@ traitlets==5.0.5
     #   ipywidgets
     #   jupyter-client
     #   jupyter-core
+    #   matplotlib-inline
     #   nbclient
     #   nbconvert
     #   nbformat
@@ -328,6 +324,10 @@ validators==0.18.2
     # via streamlit
 vobject==0.9.6.1
     # via -r requirements.in
+watchdog==2.1.1
+    # via
+    #   -r requirements.in
+    #   streamlit
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
