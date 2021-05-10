@@ -113,7 +113,7 @@ ipython-genutils==0.2.0
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.22.0
+ipython==7.23.1
     # via
     #   ipykernel
     #   ipywidgets
@@ -150,6 +150,8 @@ jupyterlab-widgets==1.0.0
     # via ipywidgets
 markupsafe==1.1.1
     # via jinja2
+matplotlib-inline==0.1.2
+    # via ipython
 mistune==0.8.4
     # via nbconvert
 nbclient==0.5.3
@@ -306,6 +308,7 @@ traitlets==5.0.5
     #   ipywidgets
     #   jupyter-client
     #   jupyter-core
+    #   matplotlib-inline
     #   nbclient
     #   nbconvert
     #   nbformat
