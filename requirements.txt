@@ -266,7 +266,7 @@ smmap==4.0.0
     # via gitdb
 snowballstemmer==2.1.0
     # via sphinx
-sphinx-click==2.7.1
+sphinx-click==3.0.0
     # via -r requirements.in
 sphinx==3.5.4
     # via sphinx-click
