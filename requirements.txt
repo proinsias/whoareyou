@@ -48,7 +48,7 @@ click-log==0.3.2
     # via -r requirements.in
 click-man==0.4.1
     # via -r requirements.in
-click-option-group==0.5.2
+click-option-group==0.5.3
     # via -r requirements.in
 click-repl==0.1.6
     # via -r requirements.in
