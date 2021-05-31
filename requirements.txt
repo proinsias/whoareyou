@@ -54,7 +54,7 @@ click-repl==0.1.6
     # via -r requirements.in
 click-spinner==0.1.10
     # via -r requirements.in
-click-threading==0.4.4
+click-threading==0.5.0
     # via -r requirements.in
 click==7.1.2
     # via
