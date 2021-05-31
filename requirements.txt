@@ -50,7 +50,7 @@ click-man==0.4.1
     # via -r requirements.in
 click-option-group==0.5.3
     # via -r requirements.in
-click-repl==0.1.6
+click-repl==0.2.0
     # via -r requirements.in
 click-spinner==0.1.10
     # via -r requirements.in
