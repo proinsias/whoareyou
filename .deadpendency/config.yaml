@@ -3,8 +3,10 @@
 ignore-failures:
 
     python:
+        - alabaster
         - async-generator
         - async-timeout
+        - blinker
         - click-completion
         - click-configfile
         - click-default-group
@@ -13,7 +15,9 @@ ignore-failures:
         - click-repl
         - click-threading
         - cycler
+        - doublemetaphone
         - entrypoints
+        - ipython-genutils
         - markupsafe
         - mccabe
         - mistune
@@ -23,5 +27,7 @@ ignore-failures:
         - probablepeople
         - pylev
         - send2trash
+        - sphinxcontrib-jsmath
         - testpath
+        - vobject
         - webencodings
