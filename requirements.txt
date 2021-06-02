@@ -318,7 +318,7 @@ typer==0.3.2
     # via -r requirements.in
 tzlocal==2.1
     # via streamlit
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 validators==0.18.2
     # via streamlit
