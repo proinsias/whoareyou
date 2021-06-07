@@ -113,7 +113,7 @@ ipython-genutils==0.2.0
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.24.0
+ipython==7.24.1
     # via
     #   ipykernel
     #   ipywidgets
