@@ -34,6 +34,21 @@ cffi==1.14.5
     # via argon2-cffi
 chardet==4.0.0
     # via requests
+click==7.1.2
+    # via
+    #   click-completion
+    #   click-configfile
+    #   click-default-group
+    #   click-didyoumean
+    #   click-help-colors
+    #   click-log
+    #   click-man
+    #   click-option-group
+    #   click-repl
+    #   click-threading
+    #   sphinx-click
+    #   streamlit
+    #   typer
 click-completion==0.5.2
     # via -r requirements.in
 click-configfile==0.2.3
@@ -56,21 +71,6 @@ click-spinner==0.1.10
     # via -r requirements.in
 click-threading==0.5.0
     # via -r requirements.in
-click==7.1.2
-    # via
-    #   click-completion
-    #   click-configfile
-    #   click-default-group
-    #   click-didyoumean
-    #   click-help-colors
-    #   click-log
-    #   click-man
-    #   click-option-group
-    #   click-repl
-    #   click-threading
-    #   sphinx-click
-    #   streamlit
-    #   typer
 colorama==0.4.4
     # via -r requirements.in
 configparser==5.0.2
@@ -108,15 +108,15 @@ ipykernel==5.5.3
     #   ipywidgets
     #   notebook
     #   pydeck
+ipython==7.25.0
+    # via
+    #   ipykernel
+    #   ipywidgets
 ipython-genutils==0.2.0
     # via
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.24.1
-    # via
-    #   ipykernel
-    #   ipywidgets
 ipywidgets==7.6.3
     # via pydeck
 jedi==0.18.0
@@ -266,10 +266,10 @@ smmap==4.0.0
     # via gitdb
 snowballstemmer==2.1.0
     # via sphinx
-sphinx-click==3.0.1
-    # via -r requirements.in
 sphinx==3.5.4
     # via sphinx-click
+sphinx-click==3.0.1
+    # via -r requirements.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
 sphinxcontrib-devhelp==1.0.2
