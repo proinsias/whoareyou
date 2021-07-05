@@ -15,7 +15,9 @@ astor==0.8.1
 async-generator==1.10
     # via nbclient
 attrs==20.3.0
-    # via jsonschema
+    # via
+    #   jsonschema
+    #   streamlit
 babel==2.9.0
     # via sphinx
 backcall==0.2.0
@@ -284,7 +286,7 @@ sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
 sqlalchemy==1.4.19
     # via -r requirements.in
-streamlit==0.83.0
+streamlit==0.84.0
     # via -r requirements.in
 terminado==0.9.4
     # via notebook
