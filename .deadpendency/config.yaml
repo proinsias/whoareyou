@@ -31,3 +31,4 @@ ignore-failures:
         - testpath
         - vobject
         - webencodings
+        - widgetsnbextension
