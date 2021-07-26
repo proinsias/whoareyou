@@ -175,6 +175,7 @@ numpy==1.21.1
     #   -r requirements.in
     #   altair
     #   pandas
+    #   pyarrow
     #   pydeck
     #   streamlit
 packaging==20.9
@@ -214,6 +215,8 @@ ptyprocess==0.7.0
     # via
     #   pexpect
     #   terminado
+pyarrow==4.0.1
+    # via streamlit
 pycparser==2.20
     # via cffi
 pydeck==0.6.2
@@ -286,7 +289,7 @@ sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
 sqlalchemy==1.4.21
     # via -r requirements.in
-streamlit==0.84.1
+streamlit==0.85.0
     # via -r requirements.in
 terminado==0.9.4
     # via notebook
