@@ -17,6 +17,7 @@ ignore-failures:
         - cycler
         - doublemetaphone
         - entrypoints
+        - imagesize
         - ipython-genutils
         - markupsafe
         - mccabe
