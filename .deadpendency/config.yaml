@@ -12,6 +12,7 @@ ignore-failures:
         - click-default-group
         - click-didyoumean
         - click-log
+        - click-man
         - click-repl
         - click-threading
         - cycler
