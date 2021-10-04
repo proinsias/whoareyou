@@ -57,7 +57,7 @@ click-configfile==0.2.3
     # via -r requirements.in
 click-default-group==1.2.2
     # via -r requirements.in
-click-didyoumean==0.0.3
+click-didyoumean==0.3.0
     # via -r requirements.in
 click-help-colors==0.9.1
     # via -r requirements.in
