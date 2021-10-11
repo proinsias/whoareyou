@@ -289,7 +289,7 @@ sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
 sqlalchemy==1.4.23
     # via -r requirements.in
-streamlit==0.88.0
+streamlit==1.0.0
     # via -r requirements.in
 terminado==0.9.4
     # via notebook
