@@ -10,7 +10,7 @@ click==7.1.2
     # via pip-tools
 decorator==5.0.7
     # via ipython
-ipython==7.28.0
+ipython==7.29.0
     # via -r dev-requirements.in
 ipython-genutils==0.2.0
     # via traitlets
