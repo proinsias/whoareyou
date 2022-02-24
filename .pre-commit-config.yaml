@@ -33,7 +33,7 @@ repos:
     # General
 
     - repo: https://github.com/Yelp/detect-secrets
-      rev: v1.1.0
+      rev: v1.2.0
       hooks:
           - id: detect-secrets
             args: [--baseline, .secrets.baseline]
@@ -112,12 +112,12 @@ repos:
           - id: mypy
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-      rev: v1.2.2
+      rev: v1.2.4
       hooks:
           - id: python-safety-dependencies-check
 
     - repo: https://github.com/jazzband/pip-tools
-      rev: 6.4.0
+      rev: 6.5.1
       hooks:
           - id: pip-compile
             files: ^requirements/production\.(in|txt)$
@@ -150,7 +150,7 @@ repos:
     # Mixed
 
     - repo: https://github.com/jumanjihouse/pre-commit-hooks
-      rev: 2.1.5
+      rev: 2.1.6
       hooks:
           - id: forbid-binary
           - id: git-check  # Configure in .gitattributes
@@ -161,7 +161,7 @@ repos:
           - id: shfmt
 
     - repo: https://github.com/Lucas-C/pre-commit-hooks
-      rev: v1.1.10
+      rev: v1.1.13
       hooks:
           - id: remove-crlf
           - id: remove-tabs
