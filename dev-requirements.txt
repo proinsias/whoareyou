@@ -4,13 +4,17 @@
 #
 #    update-requirements
 #
+asttokens==2.0.5
+    # via stack-data
 backcall==0.2.0
     # via ipython
 click==7.1.2
     # via pip-tools
 decorator==5.0.7
     # via ipython
-ipython==7.31.1
+executing==0.8.3
+    # via stack-data
+ipython==8.1.0
     # via -r dev-requirements.in
 ipython-genutils==0.2.0
     # via traitlets
@@ -32,7 +36,13 @@ prompt-toolkit==3.0.18
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
+pure-eval==0.2.2
+    # via stack-data
 pygments==2.8.1
+    # via ipython
+six==1.16.0
+    # via asttokens
+stack-data==0.2.0
     # via ipython
 toml==0.10.2
     # via pep517

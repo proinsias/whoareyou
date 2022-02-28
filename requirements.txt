@@ -12,6 +12,8 @@ argon2-cffi==20.1.0
     # via notebook
 astor==0.8.1
     # via streamlit
+asttokens==2.0.5
+    # via stack-data
 async-generator==1.10
     # via nbclient
 attrs==20.3.0
@@ -93,6 +95,8 @@ entrypoints==0.3
     # via
     #   altair
     #   nbconvert
+executing==0.8.3
+    # via stack-data
 future==0.18.2
     # via probablepeople
 gitdb==4.0.7
@@ -110,7 +114,7 @@ ipykernel==5.5.3
     #   ipywidgets
     #   notebook
     #   pydeck
-ipython==7.31.1
+ipython==8.1.0
     # via
     #   ipykernel
     #   ipywidgets
@@ -215,6 +219,8 @@ ptyprocess==0.7.0
     # via
     #   pexpect
     #   terminado
+pure-eval==0.2.2
+    # via stack-data
 pyarrow==4.0.1
     # via streamlit
 pycparser==2.20
@@ -261,6 +267,7 @@ shellingham==1.4.0
 six==1.15.0
     # via
     #   argon2-cffi
+    #   asttokens
     #   bleach
     #   click-completion
     #   click-configfile
@@ -291,6 +298,8 @@ sphinxcontrib-serializinghtml==1.1.4
     # via sphinx
 sqlalchemy==1.4.29
     # via -r requirements.in
+stack-data==0.2.0
+    # via ipython
 streamlit==1.4.0
     # via -r requirements.in
 terminado==0.9.4
