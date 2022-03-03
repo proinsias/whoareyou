@@ -23,7 +23,7 @@ jobs:
                   restore-keys: ${{ runner.os }}-gem-
 
             - name: Detect Secrets
-              uses: reviewdog/action-detect-secrets@v0.7
+              uses: reviewdog/action-detect-secrets@v0.8.1
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   reporter: github-pr-review
