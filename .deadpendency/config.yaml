@@ -28,12 +28,16 @@ ignore-failures:
         - mccabe
         - mistune
         - patsy
+        - pexpect
         - pickleshare
         - probableparsing
         - probablepeople
         - pylev
         - send2trash
+        - sphinxcontrib-applehelp
+        - sphinxcontrib-devhelp
         - sphinxcontrib-jsmath
+        - sphinxcontrib-qthelp
         - testpath
         - vobject
         - webencodings
