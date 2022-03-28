@@ -344,7 +344,7 @@ validators==0.18.2
     # via streamlit
 vobject==0.9.6.1
     # via -r requirements.in
-watchdog==2.1.6
+watchdog==2.1.7
     # via
     #   -r requirements.in
     #   streamlit
