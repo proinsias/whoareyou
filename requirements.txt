@@ -116,7 +116,7 @@ ipykernel==5.5.3
     #   ipywidgets
     #   notebook
     #   pydeck
-ipython==8.1.1
+ipython==8.2.0
     # via
     #   ipykernel
     #   ipywidgets
