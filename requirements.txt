@@ -59,7 +59,7 @@ click-didyoumean==0.3.0
     # via -r requirements.in
 click-help-colors==0.9.1
     # via -r requirements.in
-click-log==0.3.2
+click-log==0.4.0
     # via -r requirements.in
 click-man==0.4.1
     # via -r requirements.in
