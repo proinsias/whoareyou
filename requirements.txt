@@ -330,7 +330,7 @@ traitlets==5.0.5
     #   nbformat
     #   notebook
     #   pydeck
-typer==0.4.0
+typer==0.4.1
     # via -r requirements.in
 tzlocal==2.1
     # via streamlit
