@@ -2,23 +2,22 @@
 
 import typing
 
+import db
 import probablepeople as pp
 import typer
 import vobject
 import vobject.base
-from sqlalchemy import select, func, Column, Integer, Text, UniqueConstraint
-
-import db
+from sqlalchemy import Column, Integer, Text, UniqueConstraint, func
 
 
 class Contact(db.Base):
-    __tablename__ = 'contacts'
+    __tablename__ = "contacts"
     id = Column(Integer, primary_key=True)
     first_name = Column(Text)
     surname = Column(Text)
     photo_data = Column(Text)
     __table_args__ = (
-        UniqueConstraint('first_name', 'surname', name='_first_name_surname_uc'),
+        UniqueConstraint("first_name", "surname", name="_first_name_surname_uc"),
     )
 
     def __init__(self, first_name, surname, photo_data):
@@ -27,7 +26,7 @@ class Contact(db.Base):
         self.photo_data = photo_data
 
     def __repr__(self):
-        return f'Contact(first_name={self.first_name}, surname={self.surname})'
+        return f"Contact(first_name={self.first_name}, surname={self.surname})"
 
 
 db.Base.metadata.create_all()
@@ -36,20 +35,24 @@ db.Base.metadata.create_all()
 def get_contact_from_v_component(
     v_component: vobject.base.Component,
 ) -> typing.Optional[Contact]:
-    """ Docstring FIXME: """
+    """Docstring FIXME:"""
 
     # FIXME: String constants.
-    photo_data = v_component.getChildValue('photo')
-    fn_field = v_component.getChildValue('fn')
+    photo_data = v_component.getChildValue("photo")
+    fn_field = v_component.getChildValue("fn")
 
     if not fn_field:
-        typer.echo(f'No name detected - skipping...')  # FIXME: DEBUG so I don't have to import typer?
+        typer.echo(
+            f"No name detected - skipping...",
+        )  # FIXME: DEBUG so I don't have to import typer?
         return None
 
     first_name, surname = get_names_from_fn_field(fn_field)
 
     if photo_data is None:
-        typer.echo(f'No photo data detected for {first_name} {surname} - skipping...')  # FIXME: DEBUG.
+        typer.echo(
+            f"No photo data detected for {first_name} {surname} - skipping...",
+        )  # FIXME: DEBUG.
         return None
 
     return Contact(first_name, surname, photo_data)
@@ -78,34 +81,34 @@ def get_names_from_fn_field(
 
     full_name_dict = pp.tag(fn_field)[0]
 
-    if 'GivenName' in full_name_dict:
+    if "GivenName" in full_name_dict:
         # If probablepeople has successfully extracted the first name,
         # use it.
-        first_name = full_name_dict['GivenName']
+        first_name = full_name_dict["GivenName"]
 
-    if 'Surname' in full_name_dict:
+    if "Surname" in full_name_dict:
         # If probablepeople has successfully extracted the surname,
         # use it.
-        surname = full_name_dict['Surname']
+        surname = full_name_dict["Surname"]
 
     # FIXME: String constants.
 
     try:
-        fn_field_split = fn_field.split(' ')
+        fn_field_split = fn_field.split(" ")
     except (TypeError, AttributeError):
-        fn_field_split = ['']
+        fn_field_split = [""]
 
     if first_name is None:
         # If we can't get first name from probablepeople,
         # assume it's the first part of the string.
         first_name = fn_field_split[0]
         if first_name == surname:
-            first_name = ''
+            first_name = ""
 
     if surname is None:
         # If we can't get surname from probablepeople,
         # assume it's the second part of the string, if that exists.
-        surname = fn_field_split[1] if len(fn_field_split) > 1 else ''
+        surname = fn_field_split[1] if len(fn_field_split) > 1 else ""
 
     return first_name, surname
 
@@ -119,11 +122,7 @@ def loadContactsFromVCard(
         for v_component in vobject.readComponents(vcard)
     ]
 
-    return [
-        contact
-        for contact in contacts
-        if contact is not None
-    ]
+    return [contact for contact in contacts if contact is not None]
 
 
 def loadContactsIntoDb(
@@ -145,8 +144,7 @@ def getNContactsFromDb(
     return s.query(Contact).order_by(func.random()).limit(n).all()
 
 
-def getNumberContactsFromDb(
-) -> int:
+def getNumberContactsFromDb() -> int:
 
     s = db.Session()
 
