@@ -19,7 +19,38 @@ jobs:
               uses: reviewdog/action-languagetool@v1
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
+                  # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
                   reporter: github-pr-review
-          # Change reporter level if you need.
+                  # Change reporter level if you need.
                   level: warning
+
+            # Set commit status manually:
+            # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#job-status-check-functions
+            - name: Test ✅
+              if: ${{ success() }}
+              # Set the merge commit status check using GitHub REST API:
+              # https://docs.github.com/en/rest/reference/repos#create-a-commit-status
+              run: |
+                  curl --request POST \
+                  --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+                  --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+                  --header 'content-type: application/json' \
+                  --data '{
+                    "context": "e2e",
+                    "state": "success",
+                    "description": "Cypress tests passed",
+                    "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  }'
+            - name: Cypress tests 🚨
+              if: ${{ failure() }}
+              run: |
+                  curl --request POST \
+                  --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+                  --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+                  --header 'content-type: application/json' \
+                  --data '{
+                    "context": "e2e",
+                    "state": "failure",
+                    "description": "Cypress tests failed",
+                    "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                  }'
