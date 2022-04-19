@@ -19,9 +19,9 @@ jobs:
 
             - name: Install shfmt
               run: |
-                sudo apt update
-                sudo apt install snapd
-                sudo snap install shfmt
+                  sudo apt update
+                  sudo apt install snapd
+                  sudo snap install shfmt
 
             - run: pip install pre-commit
               shell: bash
@@ -37,24 +37,9 @@ jobs:
                   commit-message: Auto-update pre-commit hooks
                   body: Update versions of pre-commit hooks to latest version.
 
-            - name: Mark Stale Issues
-              uses: actions/stale@v5
-              with:
-                  repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  days-before-close: 5
-                  days-before-stale: 30
-                  exempt-issue-labels: 'awaiting-approval'
-                  exempt-pr-labels: 'awaiting-approval'
-                  stale-issue-label: 'no-issue-activity'
-                  # yamllint disable-line rule:line-length
-                  stale-issue-message: 'This issue is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
-                  stale-pr-label: 'no-pr-activity'
-                  # yamllint disable-line rule:line-length
-                  stale-pr-message: 'This pull request is stale because it has been open 30 days with no activity. Remove stale label or comment or this will be closed in 5 days'
-
             - name: markdown-link-check
               uses: gaurav-nelson/github-action-markdown-link-check@v1
               with:
                   check-modified-files-only: false
                   max-depth: 1
-                  config-file: 'mlc_config.json'
+                  config-file: mlc_config.json
