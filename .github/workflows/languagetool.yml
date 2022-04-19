@@ -41,7 +41,7 @@ jobs:
                     "description": "Cypress tests passed",
                     "target_url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
                   }'
-            - name: Cypress tests 🚨
+            - name: Tests 🚨
               if: ${{ failure() }}
               run: |
                   curl --request POST \
