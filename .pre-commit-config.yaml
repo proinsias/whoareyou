@@ -138,7 +138,7 @@ repos:
           - id: python-safety-dependencies-check
 
     - repo: https://github.com/jazzband/pip-tools
-      rev: 6.6.1
+      rev: 6.6.2
       hooks:
           - id: pip-compile
             files: ^requirements/production\.(in|txt)$
