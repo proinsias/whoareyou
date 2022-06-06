@@ -1,45 +1,43 @@
 ---
-
 name: Cron Jobs
 
 # yamllint disable-line rule:truthy
 on:
-    schedule:
-        - cron: 0 0 * * *  # every day at midnight
-    workflow_dispatch:  # Run workflow manually directly via the Github Actions Workflow page.
+  schedule:
+    - cron: 0 0 * * * # every day at midnight
+  workflow_dispatch: # Run workflow manually directly via the Github Actions Workflow page.
 
 jobs:
-    cronjobs:
+  cronjobs:
+    runs-on: ubuntu-latest
 
-        runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v3
+      - name: Install shfmt
+        run: |
+          sudo apt update
+          sudo apt install snapd
+          sudo snap install shfmt
 
-            - name: Install shfmt
-              run: |
-                  sudo apt update
-                  sudo apt install snapd
-                  sudo snap install shfmt
+      - run: pip install pre-commit
+        shell: bash
 
-            - run: pip install pre-commit
-              shell: bash
+      - run: pre-commit autoupdate
+        shell: bash
 
-            - run: pre-commit autoupdate
-              shell: bash
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: update/pre-commit-hooks
+          title: Update pre-commit hooks
+          commit-message: Auto-update pre-commit hooks
+          body: Update versions of pre-commit hooks to latest version.
 
-            - uses: peter-evans/create-pull-request@v4
-              with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  branch: update/pre-commit-hooks
-                  title: Update pre-commit hooks
-                  commit-message: Auto-update pre-commit hooks
-                  body: Update versions of pre-commit hooks to latest version.
-
-            - name: markdown-link-check
-              uses: gaurav-nelson/github-action-markdown-link-check@v1
-              with:
-                  check-modified-files-only: false
-                  max-depth: 1
-                  config-file: mlc_config.json
+      - name: markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          check-modified-files-only: false
+          max-depth: 1
+          config-file: mlc_config.json
