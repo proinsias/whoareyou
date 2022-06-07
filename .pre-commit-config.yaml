@@ -155,7 +155,7 @@ repos:
 
   - repo: https://github.com/asottile/pyupgrade
     # Automatically upgrade syntax for newer versions of the language.
-    rev: v2.32.1
+    rev: v2.34.0
     hooks:
       - id: pyupgrade
 
