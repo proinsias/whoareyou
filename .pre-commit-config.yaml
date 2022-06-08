@@ -191,7 +191,7 @@ repos:
     rev: 2.1.6
     hooks:
       - id: forbid-binary
-      - id: git-check  # Configure in .gitattributes
+      - id: git-check # Configure in .gitattributes
       - id: script-must-have-extension
       - id: script-must-not-have-extension
       - id: shellcheck
