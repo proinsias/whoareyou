@@ -49,5 +49,6 @@ ignore-failures:
     - termcolor
     - testpath
     - vobject
+    - wcwidth
     - webencodings
     - widgetsnbextension
