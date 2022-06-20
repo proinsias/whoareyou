@@ -73,7 +73,7 @@ click-spinner==0.1.10
     # via -r requirements.in
 click-threading==0.5.0
     # via -r requirements.in
-colorama==0.4.4
+colorama==0.4.5
     # via -r requirements.in
 commonmark==0.9.1
     # via rich
