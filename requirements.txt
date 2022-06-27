@@ -317,7 +317,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-sqlalchemy==1.4.37
+sqlalchemy==1.4.39
     # via -r requirements.in
 stack-data==0.2.0
     # via ipython
