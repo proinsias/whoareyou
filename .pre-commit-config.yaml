@@ -77,7 +77,7 @@ repos:
   # Python
 
   - repo: https://github.com/psf/black
-    rev: 22.3.0
+    rev: 22.6.0
     hooks:
       - id: black
 
@@ -206,7 +206,7 @@ repos:
         exclude: .git/COMMIT_EDITMSG
 
   - repo: https://github.com/sirosen/check-jsonschema
-    rev: 0.16.1
+    rev: 0.16.2
     hooks:
       - id: check-github-actions
       - id: check-github-workflows
