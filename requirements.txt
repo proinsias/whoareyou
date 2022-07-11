@@ -188,7 +188,7 @@ nest-asyncio==1.5.5
     #   notebook
 notebook==6.4.12
     # via widgetsnbextension
-numpy==1.23.0
+numpy==1.23.1
     # via
     #   -r requirements.in
     #   altair
@@ -303,7 +303,7 @@ soupsieve==2.3.2.post1
     # via beautifulsoup4
 sphinx==4.5.0
     # via sphinx-click
-sphinx-click==4.2.0
+sphinx-click==4.3.0
     # via -r requirements.in
 sphinxcontrib-applehelp==1.0.2
     # via sphinx
