@@ -321,7 +321,7 @@ sqlalchemy==1.4.39
     # via -r requirements.in
 stack-data==0.2.0
     # via ipython
-streamlit==1.10.0
+streamlit==1.11.0
     # via -r requirements.in
 terminado==0.13.3
     # via notebook
